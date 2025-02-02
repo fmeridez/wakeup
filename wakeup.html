@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arriba, arriba, arriba</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centra verticalmente */
+            align-items: center;    /* Centra horizontalmente */
+            height: 100vh;          /* Ocupa toda la altura de la pantalla */
+            margin: 0;              /* Elimina el margen por defecto */
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Evita que la página tenga barras de desplazamiento */
+        }
+        .text {
+            font-size: 20px;
+            font-weight: bold;
+            animation: blink-grow 2s infinite;
+            color: white;
+            margin-top: 20px;
+            text-align: center; /* Centra el texto */
+        }
+        @keyframes blink-grow {
+            0% { opacity: 1; font-size: 20px; }
+            100% { opacity: 1; font-size: 40px; }
+        }
+        .teletubby-image {
+            width: 80%; /* La imagen ocupa el 80% del ancho de la pantalla */
+            max-width: 300px; /* Tamaño máximo de la imagen */
+            margin-bottom: 20px;
+            border-radius: 20px;
+        }
+        audio {
+            display: block;
+            margin-top: 20px;
+            width: 80%; /* Asegura que el audio ocupe un 80% del ancho de la pantalla */
+        }
+    </style>
+</head>
+<body>
+    <img class="teletubby-image" src="https://www.lavanguardia.com/files/og_thumbnail/uploads/2019/07/23/5fa52f27ba7b7.jpeg" alt="Teletubbies">
+    <div class="text">Arriba, arriba, arriba</div>
+    <audio id="alarm" autoplay loop>
+        <source src="https://github.com/fmeridez/wakeup/raw/main/wakeupsound.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+</body>
+</html>
